@@ -6,33 +6,34 @@ let copyBtn;
 let closeBtn;
 
 let counter = 2;
-const counterMax = menuBtns.length-12;
+let counterMax = menuBtns.length;
 
 let scrapeInterval;
 
 function scrape() {
 	scrapeInterval = setInterval(function () {
 		menuBtn = menuBtns[counter];
+		menuBtn.onclick = share;
 		menuBtn.click();
-		setTimeout(function () {
+
+		function share() {
 			shareBtn = document.querySelector('.icon-share');
+			shareBtn.onclick = copy;
 			shareBtn.click();
-			console.log('first trip');
-			setTimeout(function () {
-				copyBtn = document.querySelector('.share-action-copy');
-				closeBtn = document.getElementById('modal-close');
-				console.log('second trip');
-				setTimeout(function () {
-					copyBtn.click();
-					closeBtn.click();
-					console.log('third trip');
-				}, 1000);
-			}, 1000);
-		}, 1000);
+		}
+
+		function copy() {
+			copyBtn = document.querySelector('.share-action-copy');
+			closeBtn = document.getElementById('modal-close');
+			copyBtn.onclick = close;
+			copyBtn.click();
+		}
+		function close() {
+			closeBtn.click();
+		}
 		counter++;
 		if (counter === counterMax) {
 			clearInterval(scrapeInterval);
-			console.log('interval cleared will stop after 1 more run');
 		}
 	}, 5000);
 }
