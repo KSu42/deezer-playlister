@@ -19,7 +19,8 @@ Creates a list of Deezer playlist URLs then prints each of them to console on a 
 > 3. Select `Inspect` or `Inspect Element`.
 > 4. Select the `Console` tab.
 > 5. Scroll all the way to the bottom of the Deezer playlist page so all the playlist elements load.
-> 6. Copy/paste the code into console and run!
+> 6. Copy the code from `app.js`.
+> 7. Paste the code into console and run.
 >
 > ### If using Chrome
 >
