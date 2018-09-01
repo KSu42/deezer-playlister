@@ -6,35 +6,48 @@ let copyBtn;
 let closeBtn;
 
 let counter = 2;
-const counterMax = menuBtns.length-12;
+const counterMax = menuBtns.length - 12;
 
 let scrapeInterval;
+
+let links = [];
 
 function scrape() {
 	scrapeInterval = setInterval(function () {
 		menuBtn = menuBtns[counter];
-		menuBtn.click();
-		setTimeout(function () {
-			shareBtn = document.querySelector('.icon-share');
-			shareBtn.click();
-			console.log('first trip');
-			setTimeout(function () {
-				copyBtn = document.querySelector('.share-action-copy');
-				closeBtn = document.getElementById('modal-close');
-				console.log('second trip');
-				setTimeout(function () {
-					copyBtn.click();
-					closeBtn.click();
-					console.log('third trip');
-				}, 1000);
-			}, 1000);
-		}, 1000);
-		counter++;
+		// console.log('TCL: scrapeInterval -> menuBtn', menuBtn);
 		if (counter === counterMax) {
 			clearInterval(scrapeInterval);
-			console.log('interval cleared will stop after 1 more run');
+			console.log('interval cleared');
+			setTimeout(function () {
+				console.log(links.join('\n'));
+			}, 1000);
 		}
-	}, 5000);
+		if (counter != counterMax) {
+			counter++;
+			menuBtn.click();
+			setTimeout(function () {
+				shareBtn = document.querySelector('.icon-share');
+				// console.log('TCL: scrapeInterval -> shareBtn', shareBtn);
+				shareBtn.click();
+				console.log('first trip');
+				setTimeout(function () {
+					copyBtn = document.querySelector('.share-action-copy');
+					// console.log('TCL: scrapeInterval -> copyBtn', copyBtn);
+					closeBtn = document.getElementById('modal-close');
+					// console.log('TCL: scrapeInterval -> closeBtn', closeBtn);
+					console.log('second trip');
+					setTimeout(function () {
+						// grab link and add it to link array
+						let formVal = document.querySelector('.form-control-static').value;
+						links.push(formVal);
+						closeBtn.click();
+						console.log('third trip');
+					}, 200);
+				}, 200);
+			}, 200);
+		}
+	}, 1200);
 }
 
 function clear() {
