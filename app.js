@@ -53,3 +53,5 @@ function scrape() {
 function clear() {
 	clearInterval(scrapeInterval);
 }
+
+scrape();
