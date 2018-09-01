@@ -1,0 +1,1 @@
+const linkSelect = document.querySelectorAll('.heading-4 a');

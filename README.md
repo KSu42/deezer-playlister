@@ -5,17 +5,30 @@ Creates a list of Deezer playlist URLs then prints each of them to console on a 
 
 ## Requirements
 
-* Chrome: works.
-* Firefox: will throw an error but it should still work fine.
-* Safari: make sure 'All' is selected and not 'Errors' when in console.
-* Edge: works.
-* IE11: Does NOT work.
+* A browser with developer tools console.
+  * Chrome works.
+  * Firefox works.
+  * Edge works.
+  * Safari works, but I don't know an easy way to copy the result from console.
+  * IE does NOT work.
 
-## How To Use
-
-1. Navigate to your Deezer account's playlist page (example: https://www.deezer.com/us/profile/2289853948/playlists) and scroll all the way to the bottom of the page so all the playlists load.
-2. Open developer tools console.
-3. Copy/paste the code into console and run!
+> ## How To Use
+>
+> 1. Navigate to your Deezer account's playlist page (example: https://www.deezer.com/us/profile/2289853948/playlists).
+> 2. Right-click on page.
+> 3. Select `Inspect` or `Inspect Element`.
+> 4. Select the `Console` tab.
+> 5. Scroll all the way to the bottom of the Deezer playlist page so all the playlist elements load.
+> 6. Copy/paste the code into console and run!
+>
+> ### If using Chrome
+>
+> * Simply click the `Copy` button that shows up in the console after running the code.
+>
+> ### If using Firefox
+>
+> * Right-click anywhere on the list of links and select `Copy object`.
+>
 
 ## Contribute
 
