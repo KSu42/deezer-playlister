@@ -5,9 +5,11 @@ Creates a list of Deezer playlist URLs then prints each of them to console on a 
 
 ## Requirements
 
-* Chrome: works best.
+* Chrome: works.
 * Firefox: will throw an error but it should still work fine.
 * Safari: make sure 'All' is selected and not 'Errors' when in console.
+* Edge: works.
+* IE11: Does NOT work.
 
 ## How To Use
 
