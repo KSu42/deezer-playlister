@@ -13,7 +13,7 @@ Creates a list of Deezer playlist URLs then prints each of them to console on a 
 
 ## How To Use
 
-1. Navigate to your Deezer account's playlist page. (example: https://www.deezer.com/us/profile/2289853948/playlists)
+1. Navigate to your Deezer account's playlist page (example: https://www.deezer.com/us/profile/2289853948/playlists) and scroll all the way to the bottom of the page so all the playlists load.
 2. Open developer tools console.
 3. Copy/paste the code into console and run!
 
